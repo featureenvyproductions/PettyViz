@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PettyVizConnector.Transform.Transforms
+namespace PettyVizLib.Transform.Transforms
 {
     //class representing the rename columns step
     public class RenameCols : TransformStep

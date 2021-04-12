@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using PettyVizConnector.Connect;
-using PettyVizConnector.Transform;
+using PettyVizLib.Connect;
+using PettyVizLib.Transform;
 
-namespace PettyVizConnector
+namespace PettyVizLib
 {
     //tbd....add error checking etc
     public class DataTransformer
@@ -21,14 +21,14 @@ namespace PettyVizConnector
             _inputConnection = inputConnection;
             _outputConnection = outputConnection;
             _filename = transformsFile;
-
             //set stuff and do init.
             if (Init() != 0) throw new Exception("Could not initialize transformer object");
         }
-        
-     
 
-        
+        public DataTransformer()
+        {
+            Console.Write("init data transformer test code");
+        }
 
         //initialize everything needed to run....So transforms and connection maybe
         protected int Init()
@@ -43,7 +43,7 @@ namespace PettyVizConnector
             //load the transform data
             //get a connection info object and an array of step objects.
             string data = null;
-            
+
             //load and deserialize and turn into list of objects
             List<TransformStep> transforms = new List<TransformStep>();
             return transforms;
@@ -82,7 +82,7 @@ namespace PettyVizConnector
             //tbr....don't know what to do with data yet really
             return 0;
         }
-        
+
         protected void BuildOutputQuery(Object data)
         {
             //build based on connection info and data
