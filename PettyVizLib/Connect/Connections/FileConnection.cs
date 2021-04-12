@@ -20,13 +20,14 @@ namespace PettyVizLib.Connect.Connections
             //tbd....
         }
 
-        public FileConnection(string endpoint, string username, string passowrd, string db_name)
+        public FileConnection(string endpoint, string username, string password, string db_name, string port)
         {
             //we can really just have the endpoint
             _info.endpoint = endpoint;
             _info.username = null;
             _info.password = null;
             _info.db_name = null;
+            _info.port = null;
         }
 
         //load our contents into a temporary table.

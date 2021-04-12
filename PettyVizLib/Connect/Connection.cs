@@ -12,14 +12,6 @@ namespace PettyVizLib.Connect
     //for something else.
     abstract class Connection : IConnection
     {
-        //for deserializing connection info or just keeping track of it.
-        protected struct ConnectionInfo
-        {
-            public string endpoint; //or it can be a filename...the rest will be optional if it's just a filename
-            public string username;
-            public string password;
-            public string db_name;
-        }
         protected ConnectionInfo _info;
 
         public Connection() { }
@@ -29,9 +21,18 @@ namespace PettyVizLib.Connect
             //deserialize connection info
         }
 
-        public Connection(string endpoint, string username, string passowrd, string db_name)
+        public Connection(string endpoint, string username, string password, string db_name, string port)
         {
             //or just get it all individually
+        }
+
+        //this is here in case you want to do some custom logic with the connection after subclassing.
+        //maybe you don't need the same things as the ConnectionInfo members and
+        //you've made your own custom subclass of ConnectionInfo with what you need
+        //you'd do the custom logic here.
+        public Connection(Object connInfoObject)
+        {
+
         }
 
         public void Close()
