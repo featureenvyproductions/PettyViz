@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Text.Json;
 using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace PettyVizLib.Connect.Connections
 {
@@ -16,43 +18,18 @@ namespace PettyVizLib.Connect.Connections
         public DBConnection(string connectionConfigFile)
         {
             //deserialize connection info
+            //need error handling
+            _info = JsonSerializer.Deserialize<ConnectionInfo>(File.ReadAllText(connectionConfigFile));
         }
 
-        public DBConnection(string endpoint, string username, string password, string db_name)
+        public DBConnection(string endpoint, string username, string password, string db_name, string port)
         {
             //or just get it all individually
             _info.endpoint = endpoint;
             _info.username = username;
             _info.password = password;
             _info.db_name = db_name;
-        }
-
-        public void Close()
-        {
-            //close the connection
-        }
-
-        public void Connect()
-        {
-            //create our own connection string
-        }
-
-        public void Connect(string connectionString)
-        {
-            //connect using the available connection string.
-        }
-
-        public void Execute(string query)
-        {
-            //execute the query
-            //i.e. like an insert or modify query
-        }
-
-        public void Execute(string query, out Object data)
-        {
-            //execute the query and return data from it
-            //i.e. like a select query
-            data = null;
+            _info.port = port;
         }
     }
 }
