@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PettyVizConnector.Transform
+namespace PettyVizLib.Transform
 {
     //tbr....if several renames, figure out the final result of them and have one object...
     //...maybe

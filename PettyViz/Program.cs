@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PettyVizLib;
 
 /* this is a project I started while unemployed because if i don't work I die.
  * this isn't a labor of love it's a labor of HATE
@@ -17,10 +18,12 @@ namespace PettyViz
     class Program
     {
         static void Main(string[] args)
-        { 
+        {
             //create the i/o connection objects desired
             //then pass them to the desired data transformer object
             //then run the transform
+            DataTransformer t = new DataTransformer();
+            Console.ReadLine();
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PettyVizConnector.Connect.Connections
+namespace PettyVizLib.Connect.Connections
 {
     //connection for when we're just loading input from a file
     //like a csv or excel file

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PettyVizConnector.Connect
+namespace PettyVizLib.Connect
 {
     //the base class for connections
     //I suppose we could have had just this instead of an interface but eh...i'd like to keep this flexible just bc
