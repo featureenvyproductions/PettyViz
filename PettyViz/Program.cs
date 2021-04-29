@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using PettyVizLib;
 
-/* this is a project I started while unemployed because if i don't work I die.
- * this isn't a labor of love it's a labor of HATE
- * inspired by that time i was forced to use tableau for a year and craved death every minute of it
- * and i am not done with this program, but i hope one day i will be so i will never
- * have to use tableau prep again
- * and maybe you won't have to either.
- * i'm doing my best here idk.
- * also i'm putting underscores wherever i want and you can't stop me
+/* Ok here's a better description now that other people might see this and want to know what it is.
+ * This program will just demonstrate things essentially...
+ * The real meat is in PettyVizLb, which is a framework that will make 
+ * ETL easier for developers by allowing them to define a set of steps in a file
+ * then have queries constructed from the basic steps.
+ * My goal is to design this with basic functionality, and basic database connectivity,
+ * but then make it extendable so it is simple to create one's own classes for their needs
+ * instead of having to hack things and figure out how they work.
  * */
 namespace PettyViz
 {
@@ -24,7 +24,7 @@ namespace PettyViz
             //then pass them to the desired data transformer object
             //then run the transform
             DataTransformer t = new DataTransformer();
-            Console.ReadLine();
+            Console.ReadLine();            
         }
     }
 }
